@@ -9,6 +9,10 @@ angular.module('hrportalApp')
       socket.syncUpdates('thing', $scope.awesomeThings);
     });
 
+    $http.get("api/sf/Todo").success(function(data){
+      console.log(data);
+    });
+
     $scope.addThing = function() {
       if($scope.newThing === '') {
         return;

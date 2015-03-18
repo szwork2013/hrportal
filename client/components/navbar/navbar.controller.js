@@ -6,18 +6,19 @@ angular.module('hrportalApp')
   $scope.isLoggedIn = Auth.isLoggedIn;
   $scope.isAdmin = Auth.isAdmin;
   $scope.getCurrentUser = Auth.getCurrentUser;
-  
-  sfApi.me.query(function(data, status, headers, config) {
-      console.log(data);
-    })
 
-  menuList.menu.
-    success(function(data, status, headers, config) {
-      $scope.menu = data;
-    }).
-    error(function(data, status, headers, config) {
-      console.log("plantage");
-    });
+
+  sfApi.update().success(function(data, status, headers, config) {
+    $scope.sfUser= "(sf details : " + data.content.d.firstName + ", "+ data.content.d.lastName +")";
+  });
+
+
+  menuList.menu.success(function(data, status, headers, config) {
+    $scope.menu = data;
+  }).
+  error(function(data, status, headers, config) {
+    console.log("plantage");
+  });
 
   $scope.logout = function() {
     Auth.logout();

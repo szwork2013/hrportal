@@ -7,18 +7,19 @@ angular.module('hrportalApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap'
-])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    $urlRouterProvider
-      .otherwise('/');
-    $locationProvider.html5Mode(true);
+  ])
+.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+  $urlRouterProvider
+  .otherwise('/');
+  $locationProvider.html5Mode(true);
 
-    $httpProvider.interceptors.push('authInterceptor');
-  })
+  $httpProvider.interceptors.push('authInterceptor');
+})
 
-  .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
-    return {
+.factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
+  return {
       // Add authorization token to headers
+
       request: function (config) {
         config.headers = config.headers || {};
         if ($cookieStore.get('token')) {
@@ -42,8 +43,8 @@ angular.module('hrportalApp', [
     };
   })
 
-  .run(function ($rootScope, $location, Auth, $http) {
-    
+.run(function ($rootScope, $location, Auth, $http) {
+
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {

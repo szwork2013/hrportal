@@ -36,13 +36,17 @@ User.find({}).remove(function() {
     provider: 'local',  
     name: 'Test User',  
     email: 'test@test.com',  
-    password: 'test'
+    password: 'test',
+    sflogin: 'Y2dyYW50QGFjZWptdzpBcmFnbzExMTE=',
+    sfid: 'admin'
   }, {  
     provider: 'local',
     role: 'admin',
     name: 'Admin', 
     email: 'admin@admin.com',  
-    password: 'admin'
+    password: 'admin',
+    sflogin: 'YWRtaW5AYWNlam13OkFyYWdvMDAwMA==',
+    sfid: 'cgrant1'
   }, function() {
     console.log('finished populating users');  
   }

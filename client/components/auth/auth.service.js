@@ -43,18 +43,6 @@ angular.module('hrportalApp')
         return deferred.promise;
       },
 
-
-      /**
-       * Authenticate user and save token
-       *
-       * @param  {Object}   user     - login info
-       * @param  {Function} callback - optional
-       * @return {Promise}
-       */
-       sflogin: function(user, callback) {
-        $http.post('/auth/oauth2');
-      },
-
       /**
        * Delete access token and user info
        *
@@ -115,6 +103,24 @@ angular.module('hrportalApp')
        */
        getCurrentUser: function() {
         return currentUser;
+      },
+
+      /**
+       * Gets all available info on authenticated user
+       *
+       * @return {Object} user
+       */
+       getSfUser: function() {
+        return currentUser.sflogin;
+      },
+
+      /**
+       * Gets all available info on authenticated user
+       *
+       * @return {Object} user
+       */
+       getSfId: function() {
+        return currentUser.sfid;
       },
 
       /**

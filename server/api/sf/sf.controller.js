@@ -26,7 +26,7 @@ exports.call = function(req, result) {
 		http.get({
 			hostname: 'localhost',
 			port: 9000,
-			path: "/odata/v2/"+reqURL+"&$format=json",
+			path: "/odata/v2"+reqURL+"&$format=json",
 			agent: false,
 			headers:{
 				"Authorization": key,

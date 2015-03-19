@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hrportalApp')
-.controller('LoginCtrl', function ($scope, Auth, $location) {
+.controller('LoginCtrl', function ($scope, Auth, $location, sfApi) {
   $scope.user = {};
   $scope.errors = {};
 
@@ -15,7 +15,8 @@ angular.module('hrportalApp')
       })
       .then( function() {
           // Logged in, redirect to home
-          $location.path('/page/home');
+          
+          $location.path('/');
         })
       .catch( function(err) {
         $scope.errors.other = err.message;

@@ -10,16 +10,19 @@
     </div>
     <div  class="navbar-collapse" id="navbar-main">
       <ul class="nav navbar-nav">
+        <li class="dropdown" ng-class="{active: isActive(item.slug)}">
+          <a href="/">Home</a>
+        </li>
         <li class="dropdown" ng-repeat="item in menu" ng-class="{active: isActive(item.slug)}">
           <a ahref="/page/{{item.slug}}" ng-href="/page/{{item.slug}}">{{item.name}}</a>
           <ul ng-show="item.children.length" class="dropdown-menu sub-menu">
             <li class="dropdown" ng-repeat="subitem in item.children" ng-class="{active: isActive(subitem.slug)}">
               <a ng-href="/page/{{item.slug}}/{{subitem.slug}}">{{subitem.name}}</a>
-                <ul ng-show="subitem.children" class="dropdown-menu sub-menu">
-                  <li ng-repeat="subsubitem in subitem.children" ng-class="{active: isActive(subsubitem.slug)}">
-                    <a ng-href="/page/{{item.slug}}/{{subitem.slug}}/{{subsubitem.slug}}">{{subsubitem.name}}</a>
-                  </li>
-                </ul>
+              <ul ng-show="subitem.children" class="dropdown-menu sub-menu">
+                <li ng-repeat="subsubitem in subitem.children" ng-class="{active: isActive(subsubitem.slug)}">
+                  <a ng-href="/page/{{item.slug}}/{{subitem.slug}}/{{subsubitem.slug}}">{{subsubitem.name}}</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>

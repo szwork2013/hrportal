@@ -8,7 +8,7 @@ angular.module('hrportalApp')
   $scope.getCurrentUser = Auth.getCurrentUser;
 
 
-  sfApi.update().success(function(data, status, headers, config) {
+  sfApi.me().success(function(data, status, headers, config) {
     $scope.sfUser= "(sf details : " + data.content.d.firstName + ", "+ data.content.d.lastName +")";
   });
 

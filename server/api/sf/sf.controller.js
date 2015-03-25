@@ -20,8 +20,6 @@ exports.call = function(req, result) {
 
 	var reqURL = req.url;
 	var key = "Basic " + req.query.$key;
-
-	console.log(key);
 	if(key != "Basic undefined"){
 		http.get({
 			hostname: 'localhost',

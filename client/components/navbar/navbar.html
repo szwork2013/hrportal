@@ -13,6 +13,9 @@
         <li class="dropdown" ng-class="{active: isActive(item.slug)}">
           <a href="/">Home</a>
         </li>
+        <li class="dropdown" ng-class="{active: isActive(item.slug)}">
+          <a href="/recruiting">Recruiting</a>
+        </li>
         <li class="dropdown" ng-repeat="item in menu" ng-class="{active: isActive(item.slug)}">
           <a ahref="/page/{{item.slug}}" ng-href="/page/{{item.slug}}">{{item.name}}</a>
           <ul ng-show="item.children.length" class="dropdown-menu sub-menu">

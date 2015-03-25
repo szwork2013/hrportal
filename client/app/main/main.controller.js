@@ -12,13 +12,6 @@ angular.module('hrportalApp')
     });
   });
 
-  sfApi.jobReqs().success(function(data, status, headers, config) {
-    console.log(data);
-    angular.forEach(data.content.d.results, function(reqs, key) {
-      $scope.reqs.push(reqs);
-    });
-  });
-
   $http.get('/api/things').success(function(awesomeThings) {
     $scope.awesomeThings = awesomeThings;
     socket.syncUpdates('thing', $scope.awesomeThings);

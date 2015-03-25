@@ -34,12 +34,5 @@ angular.module('hrportalApp').factory('sfApi', function sfApiFactory($http, $res
         }
         return todo;
     }
-    this.jobReqs = function(){
-
-        todo = $http.get("api/sf/Entity('JobApplication')?$key="+Auth.getSfUser());
-
-        
-        return todo;
-    }
     return this;
 });

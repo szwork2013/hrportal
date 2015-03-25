@@ -1,0 +1,18 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container home" ng-controller="RecruitingCtrl">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Recruiting List SF:</h1>
+            <ul class="" ng-repeat="recru in recruitingList">
+                <li>
+                    <a href="#">{{recru.title}}</a>
+                    <ul class="" ng-repeat="todoItem in todo.todos.results">
+                        <li>
+                            <a href="{{todoItem.url}}" target="_blank">{{todoItem.name}} - ({{todoItem.dueDateOffSet > 0 ? "Overdue " + todoItem.dueDateOffSet + " days" : 'no due date' }})</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

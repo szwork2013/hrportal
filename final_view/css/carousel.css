@@ -6,74 +6,76 @@ body {
     padding-bottom: 40px;
     color: #5a5a5a;
 }
-.container-fluid{
+
+.container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
+
 .navbar-wrapper {
     /*position: absolute;*/
+    
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
 }
-
 /* Flip around the padding for proper display in narrow viewports */
+
 .navbar-wrapper > .container {
     padding-right: 0;
     padding-left: 0;
 }
+
 .navbar-wrapper .navbar {
     padding-right: 15px;
     padding-left: 15px;
 }
-.navbar-wrapper .navbar .container {
 
-}
+.navbar-wrapper .navbar .container {}
 
-.navbar.navbar-search{
+.navbar.navbar-search {
     min-height: 30px;
 }
 
-.navbar .container-top form{
+.navbar .container-top form {
     margin: 0;
 }
-.navbar .container-top input[type='text']{
+
+.navbar .container-top input[type='text'] {
     border-radius: 0;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     border: 0;
-    color:#FFF;
+    color: #FFF;
 }
 
-.navbar .container-top p{
+.navbar .container-top p {
     margin-bottom: 0;
     margin: 7px;
 }
-
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
 /* Carousel base class */
+
 .carousel {
     height: 500px;
     margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
+
 .carousel-caption {
     z-index: 10;
 }
-
 /* Declare heights because of positioning of img element */
+
 .carousel .item {
     height: 500px;
     background-color: #777;
 }
+
 .carousel-inner > .item > img {
     position: absolute;
     top: 0;
@@ -81,80 +83,79 @@ body {
     min-width: 100%;
     height: 500px;
 }
-
-
 /* MARKETING CONTENT
 -------------------------------------------------- */
-
 /* Center align the text within the three columns below the carousel */
+
 .marketing .col-lg-4 {
     margin-bottom: 20px;
     text-align: center;
 }
+
 .marketing h2 {
     font-weight: normal;
 }
+
 .marketing .col-lg-4 p {
     margin-right: 10px;
     margin-left: 10px;
 }
-
-
 /* Featurettes
 ------------------------- */
 
 .featurette-divider {
-    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    margin: 80px 0;
+    /* Space out the Bootstrap <hr> more */
 }
-
 /* Thin out the marketing headings */
+
 .featurette-heading {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
 }
-
 /* Tweak container */
-.navbar-context{
+
+.navbar-context {
     background-color: #000;
     margin-bottom: 0;
 }
-
-
 /* Header home page */
 
-.container .logo-company{
+.container .logo-company {
     text-align: center;
     font-size: 55px;
 }
-.container.top .row{
+
+.container.top .row {
     margin-bottom: 15px;
     padding-top: 15px;
 }
-.container.top .row .block{
+
+.container.top .row .block {
     position: relative;
 }
-.container.top .row .block .img-responsive{
+
+.container.top .row .block .img-responsive {
     position: relative;
 }
 /* Block description */
 
-.container.top .row .description{
+.container.top .row .description {
     position: absolute;
-    top:0;
+    top: 0;
     color: #FFF;
     height: 100%;
     left: 0px;
     right: 0px;
     margin-right: 15px;
-    margin-left:15px;
-    background-color: rgba(0,0,0,0.7);
+    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
 }
-
 /* Block Todo */
 
-.container.top .row .description ul.todo{
+.container.top .row .description ul.todo {
     clear: both;
     float: left;
     margin: 0px;
@@ -164,31 +165,34 @@ body {
     width: 100%;
 }
 
-.container.top .row .description .todo li{
+.container.top .row .description .todo li {
     background-color: #499e97;
     list-style: none;
     margin-bottom: 1px;
     width: 100%;
 }
 
-.container.top .row .description .todo li p{
+.container.top .row .description .todo li p {
     clear: left;
     float: left;
     width: 80%;
     line-height: 30px;
     display: block;
-    margin:0;
-    padding:11px;
+    margin: 0;
+    padding: 11px;
 }
-.container.top .row .description .todo li date{
+
+.container.top .row .description .todo li date {
     float: right;
     clear: right;
 }
-.container.top .row .description .todo li .clear{
+
+.container.top .row .description .todo li .clear {
     clear: both;
 }
 
-.container.top .row .description h4, .container.top .row .description .arrow{
+.container.top .row .description h4,
+.container.top .row .description .arrow {
     margin: 0;
     padding: 7px;
     float: left;
@@ -203,62 +207,70 @@ body {
 .red {
     background-color: #c71b4d;
 }
+
 .blue {
     background-color: #98aed7;
 }
+
 .white {
     background-color: #98aed7;
 }
-.green{
+
+.green {
     background-color: #499e97;
 }
 
-.container.top .row .description .arrow{
+.container.top .row .description .arrow {
     margin-left: 2px;
     float: right;
     cursor: pointer;
 }
 
-.container.top .row .description ul{
+.container.top .row .description ul {
     clear: both;
 }
 
-.container.top .row .description a{
+.container.top .row .description a {
     color: #FFF;
 }
-.container.top .row .description.half{
+
+.container.top .row .description.half {
     width: 48%;
     left: auto;
 }
 
-.container.top .row .description.article h3{
+.container.top .row .description.article h3 {
     clear: both;
     padding: 30px;
     padding-top: 40px;
     padding-bottom: 20px;
 }
-.container.top .row .description.article p{
+
+.container.top .row .description.article p {
     clear: both;
     padding: 30px;
     padding-top: 0px;
     padding-bottom: 20px;
 }
-.container.top .row .description.article button{
+
+.container.top .row .description.article button {
     margin: 30px;
 }
 
-.container.top .row .menu{
+.container.top .row .menu {
     position: absolute;
-    bottom:0px;
-    background-color: rgba(255,255,255,0.9);
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
 }
+
 .container.top .row .menu ul {
     margin: 0;
     padding: 0;
     font-size: 0;
 }
-.container.top .row .menu ul li{
+
+.container.top .row .menu ul li {
     display: inline-block;
     width: 24%;
     text-align: center;
@@ -268,60 +280,262 @@ body {
     font-size: 14px;
 }
 
-.container.top .featurette-divider{
+.container.top .featurette-divider {
     margin: 20px 0px;
     margin-bottom: 5px;
 }
 /* Block team */
 
-.container.top .team .chef{
+.container.top .team .chef {
     text-align: center;
     list-style: none;
     padding-left: 0;
 }
 
-.container.top .team .chef li{
+.container.top .team .chef li {
     text-align: center;
     text-decoration: none;
 }
 
-.container.top .team .collegues{
+.container.top .team .collegues {
     list-style: none;
     padding-left: 0;
 }
 
-.container.top .team .collegues li{
+.container.top .team .collegues li {
     text-align: center;
     text-decoration: none;
     display: inline-block;
     float: left;
     width: 33%;
 }
+/* STD PAGE */
 
+.container.top .article h4 {
+    margin: 0;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFF;
+}
 
+.container.top .article h4 span {
+    float: right;
+    margin-right: 20px;
+}
+
+.container.top .article h4 span.glyphicon {
+    margin-right: 3px;
+}
+
+.container.top .article .img-responsive {
+    position: absolute !important;
+}
+
+.container.top .article .cont h3 {
+    margin-top: 0;
+}
+
+.container.top .article .article-descr {
+    float: left;
+    width: 25%;
+    background-color: #FFF;
+    position: relative;
+    margin-top: 430px;
+    right: 0;
+    padding: 10px;
+}
+
+.container.top .article .cont {
+    float: right;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    margin-top: 205px;
+    right: 0;
+    padding: 30px;
+}
+
+.container.top .document .description {
+    height: auto;
+    overflow: visible;
+    text-align: center;
+    height: 300px;
+}
+
+.container.top .document .glyphicon {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 60px;
+    clear: both;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.headerimg {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.headerimg img {
+    position: absolute;
+}
+
+.headerimg h4 {
+    margin: 0;
+    margin-top: 40px;
+    padding: 7px;
+    float: left;
+    font-size: 22px;
+    line-height: 22px;
+    color: #FFF;
+}
+
+.headerimg h5 {
+    clear: both;
+    margin: 0;
+    margin-top: 20px;
+    float: left;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.headerimg h6 {
+    clear: both;
+    margin: 0;
+    margin-top: 10px;
+    float: left;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFF;
+}
+.headerimg input {
+    clear: both;
+    margin: 0;
+    margin-top: 35px;
+    float: left;
+    font-size: 18px;
+    line-height: 30px;
+    width: 80%;
+    margin-left: 10%;
+    color: #000;
+}
+
+.headerimg ul {
+    position: relative;
+    bottom: 0;
+    float: left;
+    width: 100%;
+    margin-top: 35px;
+    background-color: #FFF;
+    border-bottom: 0;
+}
+
+.headerimg .nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border-radius: 0;
+    background-color: #f0b75d;
+    border: 0;
+}
+/* list */
+
+.dropdown .btn-default {
+    background-color: #f0b75d;
+    border-radius: 0;
+    border: 0;
+    line-height: 30px;
+}
+
+.list table{
+    background-color: #DDD;
+}
+.list table tr:hover{
+    background-color: #f0b75d;
+}
+.list table tr td, .list table tr{
+    border: 0;
+}
+.list table tr td, .list table tr th{
+    line-height: 30px;
+    border: 0;
+}
+
+.list-devlop{
+}
+.list-devlop h6{
+    padding-bottom: 20px;
+    background-color: #f9f9f9;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin: 0;
+}
+.list-devlop h5{
+    font-size: 22px;
+    padding-bottom: 20px;
+    background-color: #f9f9f9;
+    color: #f0b75d;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+}
+.list-devlop p{
+    text-align: justify;
+    padding-bottom: 20px;
+    background-color: #f9f9f9;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.clear:before,
+.clear:after {
+    content: " ";
+    /* 1 */
+    
+    display: table;
+    /* 2 */
+}
+
+.clear:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clear {
+    *zoom: 1;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
     /* Navbar positioning foo */
-
-    .container-top .navbar-form{
+    
+    .container-top .navbar-form {
         padding: 0;
     }
-
     .navbar-wrapper .navbar {
         padding-right: 0;
         padding-left: 0;
     }
-
-
     /* Bump up size of carousel content */
+    
     .carousel-caption p {
         margin-bottom: 20px;
         font-size: 21px;
         line-height: 1.4;
     }
-
     .featurette-heading {
         font-size: 50px;
     }
@@ -332,4 +546,3 @@ body {
         margin-top: 120px;
     }
 }
-

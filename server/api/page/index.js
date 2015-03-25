@@ -11,4 +11,7 @@ router.get('/find/**', auth.isAuthenticated(), controller.find);
 router.get('/enfants/:id', controller.children);
 router.get('/parents/:id', controller.parents);
 
+
+router.post('/', auth.isAuthenticated(), controller.save);
+
 module.exports = router;

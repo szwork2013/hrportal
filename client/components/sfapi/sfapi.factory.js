@@ -3,7 +3,7 @@
 angular.module('hrportalApp').factory('sfApi', function sfApiFactory($http, $resource, Auth) {
 
 	var menu = null;
-	var url = "https://salesdemo4.successfactors.com/login?company=acejmw&username=admin&password=Arago0000";
+	var url = "https://salesdemo4.successfactors.com/login?company=acejmw";
 	var hash = "";
     var me = null;
     var todo = null;

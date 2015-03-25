@@ -1,0 +1,54 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container home" ng-controller="PageCtrl">
+    <div class="row">
+        <div class="col-lg-8">
+            <div id="cental">
+                <top>
+                    <p>{{_category}} - News Bulletins</p>
+                    <p class="liked">93 likes</p>
+                    <p>243 views</p>
+                    <p>Share</p>
+                </top>
+                <div id="legend">
+                    <p>{{_date | date:"dd/mm/yyyy 'at' hh:mm"}}</p>
+                    <p>Created by :</p>
+                </div>
+                <div id="content">
+                    <h3>{{_title}}</h3>
+                    <p ng-bind-html="_content"></p>
+                </div>
+                <div>
+                    <img src="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            External links
+        </div>
+        <div class="col-lg-4">
+            Service request
+        </div>
+        <div class="col-lg-4">
+            My home
+        </div>
+        <div class="col-lg-4">
+            My collegues
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            Comments
+        </div>
+        <div class="col-lg-6">
+            Twitter
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>Angular Fullstack v2.0.13</p>
+        </div>
+    </footer>
+    <form class="form-horizontal" role="form" ng-submit="updateMovie()">
+        <div ng-include="'partials/_form.html'"></div>
+    </form>
+</div>

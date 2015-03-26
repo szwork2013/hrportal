@@ -13,6 +13,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(client) app/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/textAngular/src/textAngular.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css({.tmp,client}) app/app.css -->
@@ -20,6 +21,15 @@
   <!-- injector:css -->
   <!-- endinjector -->
   <!-- endbuild -->
+  <style>
+.ta-editor {
+  min-height: 300px;
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+}
+</style>
 </head>
 <body ng-app="hrportalApp">
     <!--[if lt IE 7]>
@@ -55,6 +65,15 @@
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/angular-socket-io/socket.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/rangy/rangy-core.js"></script>
+    <script src="bower_components/rangy/rangy-classapplier.js"></script>
+    <script src="bower_components/rangy/rangy-highlighter.js"></script>
+    <script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+    <script src="bower_components/rangy/rangy-serializer.js"></script>
+    <script src="bower_components/rangy/rangy-textrange.js"></script>
+    <script src="bower_components/textAngular/src/textAngular.js"></script>
+    <script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
+    <script src="bower_components/textAngular/src/textAngularSetup.js"></script>
     <!-- endbower -->
     <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -62,6 +81,8 @@
     <!-- build:js({.tmp,client}) app/app.js -->
     <script src="app/app.js"></script>
     <!-- injector:js -->
+    <script src="app/faq/faq.controller.js"></script>
+    <script src="app/faq/faq.js"></script>
     <script src="app/account/account.js"></script>
     <script src="app/account/login/login.controller.js"></script>
     <script src="app/account/settings/settings.controller.js"></script>

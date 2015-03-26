@@ -38,7 +38,7 @@ exports.index = function(req, res) {
 
             };
             client.query(args2, function(err, result2) {
-                console.log(result2);
+                //console.log(result2);
                 res.json(result2);
             });
 

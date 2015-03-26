@@ -1,35 +1,14 @@
 'use strict';
 
 angular.module('hrportalApp')
-.controller('MainCtrl', function ($scope, $http, socket, sfApi) {
-  $scope.awesomeThings = [];
-  $scope.todos = [];
-  $scope.reqs = [];
+    .controller('MainCtrl', function($scope, sfApi) {
+        $scope.todos = [];
 
-  sfApi.todo().success(function(data, status, headers, config) {
-    angular.forEach(data.content.d.results, function(todoCat, key) {
-      $scope.todos.push(todoCat);
+        sfApi.todo();
+
+        $scope.$on("todo_loaded", function(event, todos) {
+            //console.log(todos);
+            $scope.todos = todos;
+        });
+
     });
-  });
-
-  $http.get('/api/things').success(function(awesomeThings) {
-    $scope.awesomeThings = awesomeThings;
-    socket.syncUpdates('thing', $scope.awesomeThings);
-  });
-
-  $scope.addThing = function() {
-    if($scope.newThing === '') {
-      return;
-    }
-    $http.post('/api/things', { name: $scope.newThing });
-    $scope.newThing = '';
-  };
-
-  $scope.deleteThing = function(thing) {
-    $http.delete('/api/things/' + thing._id);
-  };
-
-  $scope.$on('$destroy', function () {
-    socket.unsyncUpdates('thing');
-  });
-});

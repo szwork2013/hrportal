@@ -1,0 +1,42 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container home" ng-controller="PageCreateCtrl">
+    <div class="row">
+        <div class="col-lg-8">
+            <div id="cental">
+                <form class="form-horizontal" role="form" ng-submit="addPage()">
+                    ID:
+                    <br/>
+                    <br/>
+                    <input type="text" ng-model="page._id" id="id" name="id" />
+                    <br/>Title :
+                    <br/>
+                    <input type="text" ng-model="page.name" id="name" name="name" />
+                    <br/> Content :
+                    <br/>
+                    <div text-angular ng-model="page.content" ta-toolbar="[['h1','h2','h3', 'p'],['bold','italics']]"></div>
+                    <br/>
+                    <input type="submit" value="Save" />
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            External links
+        </div>
+        <div class="col-lg-4">
+            Service request
+        </div>
+        <div class="col-lg-4">
+            My home
+        </div>
+        <div class="col-lg-4">
+            My collegues
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>Angular Fullstack v2.0.13</p>
+        </div>
+    </footer>
+</div>

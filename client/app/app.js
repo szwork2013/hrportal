@@ -7,7 +7,8 @@ angular.module('hrportalApp', [
         'btford.socket-io',
         'ui.router',
         'ui.bootstrap',
-        'textAngular'
+        'textAngular',
+        'angularFileUpload'
     ])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, $provide) {
         $urlRouterProvider.otherwise('/');

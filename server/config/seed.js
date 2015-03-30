@@ -8,6 +8,7 @@
  var Thing = require('../api/thing/thing.model');
  var User = require('../api/user/user.model');
  var Page = require('../api/page/page.model');
+ var Faq = require('../api/faq/faq.model');
 
  Thing.find({}).remove(function() {
   Thing.create({
@@ -99,6 +100,48 @@ Page.find({}).remove(function() {
   }
   );
 });
+
+Faq.find({}).remove(function() { 
+  /*
+
+  question: String,
+  answer: String,
+  created : { type: Date, default: Date.now },
+  active: Boolean
+
+  */
+
+  Faq.create(
+  {
+    question: "Comment marche ce site internet ?",
+    answer: "Il marche de la facon suivante, vous devriez vous concentrer.",
+    active: true
+  },{
+    question: "Comment marche ce site internet ?",
+    answer: "Il marche de la facon suivante, vous devriez vous concentrer.",
+    active: true
+  },
+  {
+    question: "Comment marche ce site internet ?",
+    answer: "Il marche de la facon suivante, vous devriez vous concentrer.",
+    active: true
+  },
+  {
+    question: "Comment marche ce site internet ?",
+    answer: "Il marche de la facon suivante, vous devriez vous concentrer.",
+    active: true
+  },
+  {
+    question: "Comment marche ce site internet ?",
+    answer: "Il marche de la facon suivante, vous devriez vous concentrer.",
+    active: true
+  }, function() {
+    console.log('finished populating faqs');
+  }
+  );
+});
+
+
 
 
 
